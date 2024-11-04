@@ -35,5 +35,7 @@ IE5 was bundled with:
   - Windows 2000
   - Windows ME
 
-Via: https://en.wikipedia.org/wiki/HTML_Application
+Via: https://en.wikipedia.org/wiki/HTML_Application  +
 Via: https://en.wikipedia.org/wiki/Internet_Explorer_5
+
+\... which makes all three initial requirements satisfied.
