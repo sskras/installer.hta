@@ -9,10 +9,12 @@
 
   - would be text-based  +
     (could be fixed by hand / using notepad, with no rebuilding)
+
   - could run on as many retired NT versions as possible  +
     (going back to at least Win XP or even Win 2000)
+
   - would have no 3rd party dependencies  +
-    (ones like Qt, Python, Perl, Lua, UI\++)
+    (ones like Qt, Python, Perl, Lua, UI++)
 
 So he ran some research and chose the IE-based HTA -- HTML Application
 technology introduced in 1999 on IE5 that was supported on these OSes:
@@ -27,7 +29,7 @@ technology introduced in 1999 on IE5 that was supported on these OSes:
   - Solaris
   - HP-UX (up to 5.01 SP1)
 
-... and was bundled with:
+IE5 was bundled with:
 
   - Windows 98 Second Edition
   - Windows 2000
