@@ -1,8 +1,37 @@
 // SPDX-License-Identifier: BlueOak-1.0.0
 // SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
-= `TODO` name | short description
+= Windows HTA-based application installer
 
-=== `TODO` Section
+=== The story
 
-`TODO` repo introduction
+@sskras thought it would be nice to have a simple installation framework which:
+
+  - would be text-based  +
+    (could be fixed by hand / using notepad, with no rebuilding)
+  - could run on as many retired NT versions as possible  +
+    (going back to at least Win XP or even Win 2000)
+  - would have no 3rd party dependencies  +
+    (ones like Qt, Python, Perl, Lua, UI\++)
+
+So he ran some research and chose the IE-based HTA -- HTML Application
+technology introduced in 1999 on IE5 that was supported on these OSes:
+
+  - Windows 3.1x
+  - Windows NT 3.51
+  - Windows 95
+  - Windows NT 4.0 SP3 or later
+  - Windows 98
+  - Mac OS X (up to v5.2.3)
+  - Classic Mac OS (up to v5.1.7)
+  - Solaris
+  - HP-UX (up to 5.01 SP1)
+
+... and was bundled with:
+
+  - Windows 98 Second Edition
+  - Windows 2000
+  - Windows ME
+
+Via: https://en.wikipedia.org/wiki/HTML_Application
+Via: https://en.wikipedia.org/wiki/Internet_Explorer_5
