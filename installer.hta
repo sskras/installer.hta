@@ -12,11 +12,11 @@
     <!-- Via: https://learn.microsoft.com/en-us/previous-versions/ms536495(v=vs.85) -->
 
     <HTA:APPLICATION
-      APPLICATIONNAME = "installer.hta"
+      APPLICATIONNAME = "installer.hta"         # Application name, used to identify a single application via SINGLEINSTANCE
       ICON            = "installer.ico"
       MAXIMIZEBUTTON  = "No"
       MINIMIZEBUTTON  = "No"
-      SINGLEINSTANCE  = "Yes"
+      SINGLEINSTANCE  = "yes"                   # Allow only one instance of the app to run
       SYSMENU         = "Yes"
     >
   </head>
