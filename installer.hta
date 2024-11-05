@@ -26,6 +26,21 @@
     >
   </head>
 
+  <!-- Via: https://stackoverflow.com/questions/3166195/change-hta-application-window-size/16570529#16570529 -->
+  <script language="JScript">
+
+    function initial_window_placement()
+    {
+       var width = 640;
+       var height = 480;
+
+       window.resizeTo(width, height);
+    }
+
+    window.onload = initial_window_placement;
+
+  </script>
+
   <body>
     Welcome to the app setup:
     <hr/>
