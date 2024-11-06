@@ -37,13 +37,30 @@
 
     function initial_window_placement()
     {
-    // window.focus();
+ //   window.focus();
        window.resizeTo(width, height);
 
-       var x_offset = (screen.width - width)/2;
+      var x_offset = (screen.width - width)/2;
        var y_offset = (screen.height - height)/2;
 
        window.moveTo(x_offset, y_offset);
+
+ //   Debug via printing:
+ //
+ //   debug_msg = "screen.width - document.body.clientWidth = " + (screen.width - document.body.clientWidth)
+ //      + "\n" + "document.body.clientWidth = " + document.body.clientWidth
+ //      + "\n" + "width = " + width;
+ //
+ //   Su garsiniu įspėjimu:
+ //
+ //   alert(debug_msg);
+ //
+ //   Tyliai:
+ //
+ //   var shell = new ActiveXObject("WScript.Shell");
+ //   shell.Popup(debug_msg);
+ //
+ //   Via: https://stackoverflow.com/questions/3106806/how-to-show-a-popup-without-a-browser/3112653#3112653
     }
 
     window.onload = initial_window_placement;
