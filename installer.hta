@@ -94,11 +94,12 @@
         if (ev.ctrlKey == false) return;
         if (ev.altKey == true) return;
         if (ev.altKey == true) return;
-
-        // Got key combo Ctrl-P, Ctrl-[-] or Ctrl-[+]. Block it:
-        ev.keyCode = 0;
-        ev.returnValue = null;
       }
+      else return;
+
+      // Got a blacklisted key combo. Block it:
+      ev.keyCode = 0;
+      ev.returnValue = null;
     }
 
     document.onkeydown = disable_hotkeys;
