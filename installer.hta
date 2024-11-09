@@ -76,12 +76,14 @@
     {
       // Let's disable following hotkeys:
       //   - Ctrl-P   (avoid Printing dialog)
+      //   - Ctrl-F5, F5    (avoid page reloads)
       //   - Ctrl-[-] (avoid zooming out)
-      //   - Ctrl-[+] (avoid zooming in)
+      //   - Ctrl-[+]       (avoid zooming in)
 
       // Via: https://cherrytree.at/misc/vk.htm
       // Via: https://stackoverflow.com/questions/6888570/declaring-variables-without-var-keyword
       VK_P         =  80;
+      VK_F5        = 116;
       VK_OEM_PLUS  = 187;
       VK_OEM_MINUS = 189;
 
@@ -90,6 +92,11 @@
       if ((ev.keyCode == VK_P) || (ev.keyCode == VK_OEM_PLUS) || (ev.keyCode == VK_OEM_MINUS))
       {
         if (ev.ctrlKey == false) return;
+        if (ev.altKey == true) return;
+        if (ev.shiftKey == true) return;
+      }
+      else if ((ev.keyCode == VK_F5))
+      {
         if (ev.altKey == true) return;
         if (ev.shiftKey == true) return;
       }
