@@ -75,11 +75,13 @@
     function disable_hotkeys()
     {
       // Let's disable following hotkeys:
+      //   - Ctrl-P   (avoid Printing dialog)
       //   - Ctrl-[-] (avoid zooming out)
       //   - Ctrl-[+] (avoid zooming in)
 
       // Via: https://cherrytree.at/misc/vk.htm
       // Via: https://stackoverflow.com/questions/6888570/declaring-variables-without-var-keyword
+      VK_P         =  80;
       VK_OEM_PLUS  = 187;
       VK_OEM_MINUS = 189;
 
@@ -87,13 +89,13 @@
 
  //   alert("Key: " + ev.keyCode + "\n" + "ev.ctrlKey: " + ev.ctrlKey + "\n" + "ev.altKey: " + ev.altKey + "\n" + "ev.shiftKey: " + ev.shiftKey);
 
-      if ((ev.keyCode == VK_OEM_PLUS) || (ev.keyCode == VK_OEM_MINUS))
+      if ((ev.keyCode == VK_P) || (ev.keyCode == VK_OEM_PLUS) || (ev.keyCode == VK_OEM_MINUS))
       {
         if (ev.ctrlKey == false) return;
         if (ev.altKey == true) return;
         if (ev.altKey == true) return;
 
-        // Got key combo Ctrl-[-] or Ctrl-[+]. Block it:
+        // Got key combo Ctrl-P, Ctrl-[-] or Ctrl-[+]. Block it:
         ev.keyCode = 0;
         ev.returnValue = null;
       }
