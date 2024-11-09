@@ -80,7 +80,7 @@
 
       if ((ev.keyCode == 187) || (ev.keyCode == 189))
       {
-        if (ev.ctrlKey) return;
+        if (ev.ctrlKey == false) return;
 
         // Got key combo Ctrl-[-] or Ctrl-[+]. Block it:
         ev.keyCode = 0;
