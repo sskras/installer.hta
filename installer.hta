@@ -87,15 +87,15 @@
 
       var ev = window.event;
 
- //   alert("Key: " + ev.keyCode + "\n" + "ev.ctrlKey: " + ev.ctrlKey + "\n" + "ev.altKey: " + ev.altKey + "\n" + "ev.shiftKey: " + ev.shiftKey);
-
       if ((ev.keyCode == VK_P) || (ev.keyCode == VK_OEM_PLUS) || (ev.keyCode == VK_OEM_MINUS))
       {
         if (ev.ctrlKey == false) return;
         if (ev.altKey == true) return;
-        if (ev.altKey == true) return;
+        if (ev.shiftKey == true) return;
       }
       else return;
+
+      alert("The key is disabled: \n\n" + "ev.keyCode: " + ev.keyCode + "\n" + "ev.ctrlKey: " + ev.ctrlKey + "\n" + "ev.altKey: " + ev.altKey + "\n" + "ev.shiftKey: " + ev.shiftKey);
 
       // Got a blacklisted key combo. Block it:
       ev.keyCode = 0;
