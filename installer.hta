@@ -70,8 +70,27 @@
     }
 
     window.onload = initial_window_placement;
-
  //   Via: https://stackoverflow.com/questions/3166195/change-hta-application-window-size/16570529#16570529
+
+    function disable_hotkeys()
+    {
+      var ev = window.event;
+
+ //   alert("Key: " + ev.keyCode + "\n" + "ev.ctrlKey: " + ev.ctrlKey);
+
+      if ((ev.keyCode == 187) || (ev.keyCode == 189))
+      {
+        if (ev.ctrlKey) return;
+
+        // Got key combo Ctrl-[-] or Ctrl-[+]. Block it:
+        ev.keyCode = 0;
+        ev.returnvalue = null;
+      }
+    }
+
+    document.onkeydown = disable_hotkeys;
+ // Via: https://stackoverflow.com/questions/1130353/disable-internet-explorer-shortcut-keys/5354547#5354547
+
   </script>
 
   <body>
