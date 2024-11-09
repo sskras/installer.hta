@@ -74,11 +74,16 @@
 
     function disable_hotkeys()
     {
+      // Via: https://cherrytree.at/misc/vk.htm
+      // Via: https://stackoverflow.com/questions/6888570/declaring-variables-without-var-keyword
+      VK_OEM_PLUS  = 187;
+      VK_OEM_MINUS = 189;
+
       var ev = window.event;
 
  //   alert("Key: " + ev.keyCode + "\n" + "ev.ctrlKey: " + ev.ctrlKey);
 
-      if ((ev.keyCode == 187) || (ev.keyCode == 189))
+      if ((ev.keyCode == VK_OEM_PLUS) || (ev.keyCode == VK_OEM_MINUS))
       {
         if (ev.ctrlKey == false) return;
 
