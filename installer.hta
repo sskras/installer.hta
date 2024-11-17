@@ -54,6 +54,9 @@
 
   <script language="JScript">
 
+      document.title = navigator.userAgent;
+      // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
+
     function initial_window_placement()
     {
  //   window.focus();
@@ -123,7 +126,7 @@
       }
       else return;
 
-      alert("The key is disabled: \n\n" + "ev.keyCode: " + ev.keyCode + "\n" + "ev.ctrlKey: " + ev.ctrlKey + "\n" + "ev.altKey: " + ev.altKey + "\n" + "ev.shiftKey: " + ev.shiftKey);
+ //   alert("The key is disabled: \n\n" + "ev.keyCode: " + ev.keyCode + "\n" + "ev.ctrlKey: " + ev.ctrlKey + "\n" + "ev.altKey: " + ev.altKey + "\n" + "ev.shiftKey: " + ev.shiftKey);
 
       // Got a blacklisted key combo. Block it:
       ev.keyCode = 0;
