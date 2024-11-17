@@ -54,8 +54,9 @@
 
   <script language="JScript">
 
-      document.title = navigator.userAgent;
+      document.title = document.documentMode + ": " + navigator.userAgent;
       // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
+      // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
 
     function initial_window_placement()
     {
