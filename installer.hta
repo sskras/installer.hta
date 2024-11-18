@@ -10,7 +10,7 @@
 
 <html>
   <head>
-    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <meta http-equiv="x-ua-compatible" content="IE=10" />
     <!-- Via: https://stackoverflow.com/questions/52800783/how-to-select-the-version-of-internet-explorer-for-hta-html-application/52801066#52801066 -->
     <!-- Via: https://stackoverflow.com/questions/24297029/hta-and-x-ua-compatible-meta-tag#:~:text=best%20overall%20results%20with%20IE%3D9%20or%20IE%3D10 -->
     <!-- Via: https://stackoverflow.com/questions/10975107/forcing-internet-explorer-9-to-use-standards-document-mode -->
@@ -19,6 +19,9 @@
     <!--
       * IE=5,7,8,9:
         - breaks the Input Clear button removal;
+      * IE=10,11:
+        - breaks the <HTA> tag parsing
+          (most of window properties/fine-tunings are lost);
      -->
 
     <script>
