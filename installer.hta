@@ -31,6 +31,9 @@
     <script>
       width = 640;
       height = 480;
+
+      // Picked gray background color from the main window of "gBurner Virtual Drive 5.2 Setup":
+      bk_color = "#F0F0F0";
     </script>
 
     <title>TODO Installer title</title>
@@ -88,6 +91,9 @@
   </style>
 
   <script language="JScript">
+
+    document.body.style.background = bk_color;
+    // Via: https://stackoverflow.com/questions/197748/how-do-i-change-the-background-color-with-javascript/197761#197761
 
     document.title = document.documentMode + ": " + navigator.userAgent;
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
