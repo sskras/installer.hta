@@ -6,12 +6,16 @@
   SPDX-FileCopyrightText: 2024 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
   Via: https://gitlab.com/chrismbradford/osd-wizard
--->
+ -->
 
 <html>
   <head>
-    <meta http-equiv="x-ua-compatible" content="IE=10" />
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
     <!-- Via: https://stackoverflow.com/questions/52800783/how-to-select-the-version-of-internet-explorer-for-hta-html-application/52801066#52801066 -->
+    <!--
+      * IE=5,7,8,9:
+        - breaks the Input Clear button removal;
+     -->
 
     <script>
       width = 640;
@@ -61,6 +65,15 @@
       /* Via: https://stackoverflow.com/questions/10842665/internet-explorer-10-windows-8-remove-text-input-and-password-action-icons/17986002#17986002 */
       /* Via: https://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs/14739092#14739092 */
     }
+    /* Both of the above tricks fail on IE11 which emulates IE<=9 -- the input's clear button stays present.
+
+       Via: https://forum.profoundlogic.com/forum/viewtopic.php?t=1878#p6597
+       Via: https://stackoverflow.com/questions/31448563/deactivate-the-clear-button-in-input-fields-for-ie8
+       Via: https://stackoverflow.com/questions/19244916/remove-clear-field-x-button-when-browser-mode-ie9-document-modeie9-on-certa
+       Via: https://docs2.w3cub.com/css/::-ms-clear/#:~:text=supported%20only%20in%20Internet%20Explorer%2010%20and%2011%20and%20Edge%2012%2B
+       Via: https://yehg.net/lab/pr0js/misc/ie10-nopeeping/CSS/IE-10/
+       Via: https://jwcooney.com/2013/11/04/fixing-ie-10-text-box-x-and-sizing-issues/
+    */
   </style>
 
   <script language="JScript">
