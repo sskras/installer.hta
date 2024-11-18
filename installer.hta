@@ -9,14 +9,14 @@
 -->
 
 <html>
-  <script>
-      width = 640;
-      height = 480;
-  </script>
-
   <head>
     <meta http-equiv="x-ua-compatible" content="IE=10" />
     <!-- Via: https://stackoverflow.com/questions/52800783/how-to-select-the-version-of-internet-explorer-for-hta-html-application/52801066#52801066 -->
+
+    <script>
+      width = 640;
+      height = 480;
+    </script>
 
     <title>TODO Installer title</title>
 
@@ -63,6 +63,8 @@
       document.title = document.documentMode + ": " + navigator.userAgent;
       // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
       // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
+
+    alert(document.title);
 
     function initial_window_placement()
     {
