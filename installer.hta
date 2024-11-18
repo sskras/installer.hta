@@ -89,9 +89,9 @@
 
   <script language="JScript">
 
-      document.title = document.documentMode + ": " + navigator.userAgent;
-      // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
-      // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
+    document.title = document.documentMode + ": " + navigator.userAgent;
+    // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
+    // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
 
     alert(document.title);
 
@@ -105,34 +105,34 @@
 
       window.moveTo(x_offset, y_offset);
 
- //   Debug via printing:
- //
+      // Debug via printing:
+      //
  //   debug_msg = "screen.width - document.body.clientWidth = " + (screen.width - document.body.clientWidth)
  //      + "\n" + "document.body.clientWidth = " + document.body.clientWidth
  //      + "\n" + "width = " + width;
- //
- //   Su garsiniu įspėjimu:
- //
+      //
+      // Su garsiniu įspėjimu:
+      //
  //   alert(debug_msg);
- //
- //   Tyliai:
- //
+
+      // Tyliai:
+
  //   var shell = new ActiveXObject("WScript.Shell");
  //   shell.Popup(debug_msg);
- //
- //   Via: https://stackoverflow.com/questions/3106806/how-to-show-a-popup-without-a-browser/3112653#3112653
+      //
+      // Via: https://stackoverflow.com/questions/3106806/how-to-show-a-popup-without-a-browser/3112653#3112653
 
- //   Try disabling Ctrl–[-] and Ctrl–[+] hotkeys:
- //
+      // Try disabling Ctrl–[-] and Ctrl–[+] hotkeys:
+
  //   document.onkeydown = function () {
  //     if (event.keyCode == 17) alert('Ctrl Key is disabled');
  //   };
- //
- //   Via: https://stackoverflow.com/questions/1130353/disable-internet-explorer-shortcut-keys/1130397#1130397
+      //
+      // Via: https://stackoverflow.com/questions/1130353/disable-internet-explorer-shortcut-keys/1130397#1130397
     }
 
     window.onload = initial_window_placement;
- // Via: https://stackoverflow.com/questions/3166195/change-hta-application-window-size/16570529#16570529
+    // Via: https://stackoverflow.com/questions/3166195/change-hta-application-window-size/16570529#16570529
 
     function disable_hotkeys()
     {
@@ -142,12 +142,12 @@
       //   - Ctrl-[-]       (avoid zooming out)
       //   - Ctrl-[+]       (avoid zooming in)
 
-      // Via: https://cherrytree.at/misc/vk.htm
-      // Via: https://stackoverflow.com/questions/6888570/declaring-variables-without-var-keyword
       VK_P         =  80;
       VK_F5        = 116;
       VK_OEM_PLUS  = 187;
       VK_OEM_MINUS = 189;
+      // Via: https://cherrytree.at/misc/vk.htm
+      // Via: https://stackoverflow.com/questions/6888570/declaring-variables-without-var-keyword
 
       var ev = window.event;
 
@@ -172,7 +172,7 @@
     }
 
     document.onkeydown = disable_hotkeys;
- // Via: https://stackoverflow.com/questions/1130353/disable-internet-explorer-shortcut-keys/5354547#5354547
+    // Via: https://stackoverflow.com/questions/1130353/disable-internet-explorer-shortcut-keys/5354547#5354547
 
   </script>
 
