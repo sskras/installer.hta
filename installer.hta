@@ -123,21 +123,13 @@
       // Su garsiniu įspėjimu:
       //
  //   alert(debug_msg);
-
+      //
       // Tyliai:
-
+      //
  //   var shell = new ActiveXObject("WScript.Shell");
  //   shell.Popup(debug_msg);
       //
       // Via: https://stackoverflow.com/questions/3106806/how-to-show-a-popup-without-a-browser/3112653#3112653
-
-      // Try disabling Ctrl–[-] and Ctrl–[+] hotkeys:
-
- //   document.onkeydown = function () {
- //     if (event.keyCode == 17) alert('Ctrl Key is disabled');
- //   };
-      //
-      // Via: https://stackoverflow.com/questions/1130353/disable-internet-explorer-shortcut-keys/1130397#1130397
     }
 
     window.onload = initial_window_placement;
