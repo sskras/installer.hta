@@ -10,7 +10,7 @@
 
 <html>
   <head>
-    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <meta http-equiv="x-ua-compatible" content="IE=8" />
     <!-- Via: https://stackoverflow.com/questions/52800783/how-to-select-the-version-of-internet-explorer-for-hta-html-application/52801066#52801066 -->
     <!-- Via: https://stackoverflow.com/questions/24297029/hta-and-x-ua-compatible-meta-tag#:~:text=best%20overall%20results%20with%20IE%3D9%20or%20IE%3D10 -->
     <!-- Via: https://stackoverflow.com/questions/10975107/forcing-internet-explorer-9-to-use-standards-document-mode -->
@@ -92,9 +92,6 @@
 
   <script language="JScript">
 
-    document.body.style.background = bk_color;
-    // Via: https://stackoverflow.com/questions/197748/how-do-i-change-the-background-color-with-javascript/197761#197761
-
     document.title = document.documentMode + ": " + navigator.userAgent;
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
@@ -103,6 +100,10 @@
 
     function initial_window_placement()
     {
+      document.body.style.background = bk_color;
+      // Via: https://stackoverflow.com/questions/197748/how-do-i-change-the-background-color-with-javascript/197761#197761
+      // Via: https://stackoverflow.com/questions/13712697/set-background-color-in-hex/75054561#75054561
+
  //   window.focus();
       window.resizeTo(width, height);
 
