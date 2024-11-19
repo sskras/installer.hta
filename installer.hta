@@ -31,9 +31,6 @@
     <script>
       width = 640;
       height = 480;
-
-      // Picked gray background color from the main window of "gBurner Virtual Drive 5.2 Setup":
-      bk_color = "#F0F0F0";
     </script>
 
     <title>TODO Installer title</title>
@@ -60,6 +57,10 @@
     /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/Comments#syntax */
 
     body {
+      /* Picked gray background color from the main window of "gBurner Virtual Drive 5.2 Setup": */
+      background-color: #F0F0F0;
+      /* Via: https://stackoverflow.com/questions/13712697/set-background-color-in-hex/75054561#75054561 */
+
       font-family:  'MS Shell Dlg 2';
       font-size:    11pt;
       font-weight:  400;
@@ -100,10 +101,6 @@
 
     function initial_window_placement()
     {
-      document.body.style.background = bk_color;
-      // Via: https://stackoverflow.com/questions/197748/how-do-i-change-the-background-color-with-javascript/197761#197761
-      // Via: https://stackoverflow.com/questions/13712697/set-background-color-in-hex/75054561#75054561
-
  //   window.focus();
       window.resizeTo(width, height);
 
