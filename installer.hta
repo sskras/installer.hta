@@ -20,6 +20,9 @@
       * IE=5,7,8,9:
         - breaks the Input Clear button removal;
           (the button is unusual to see in a focused edit box )
+      * IE=8:
+        - paints the inner border regardless of the <HTA INNERBORDER=...> parameter when the preceding element is not the <style>;
+          (could be worked around by placing the empty <script> </script> element there)
       * IE=9:
         - breaks blocking the intercepted hotkeys;
           (so the content becomes zoomable using Ctrl-[-] and Ctrl-[+] again)
@@ -72,6 +75,8 @@
       width = 640;
       height = 480;
     </script>
+
+    <style> "Workaround for IE8" </style>
 
     <HTA:APPLICATION
       APPLICATIONNAME = "installer.hta"         # Application name, used to identify a single application via SINGLEINSTANCE
