@@ -77,18 +77,26 @@
     </style>
 
     <script>
-      str_w  = document.styleSheets[0].rules[0].style['width'];
-      str_h  = document.styleSheets[0].rules[0].style['height']
+      var str_w  = document.styleSheets[0].rules[0].style['width'];
+      var str_h  = document.styleSheets[0].rules[0].style['height']
       // Via: https://stackoverflow.com/questions/16778814/read-css-property-from-stylesheet/16778879#16778879
       // Via: https://stackoverflow.com/questions/9180184/access-css-file-contents-via-javascript/9180271#9180271
       // Via: https://stackoverflow.com/questions/38059852/what-is-the-difference-between-the-cssrules-and-rules-objects#comment63559081_38059852
       // Via: https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration
       // Via: https://stackoverflow.com/questions/56586320/is-there-a-difference-between-getpropertyvalue-and-the-bracket-notation-for
 
-      width  = Number(str_w.replace(/px$/, ''));
-      height = Number(str_h.replace(/px$/, ''));
+      var width  = Number(str_w.replace(/px$/, ''));
+      var height = Number(str_h.replace(/px$/, ''));
       // Via: https://stackoverflow.com/questions/3024084/jquery-javascript-how-do-i-convert-a-pixel-value-20px-to-a-number-value-2
+
+      window.resizeTo(width, height);
+
+      var x_offset = (screen.width - width)/2;
+      var y_offset = (screen.height - height)/2;
+
+      window.moveTo(x_offset, y_offset);
     </script>
+    <!-- Via: https://stackoverflow.com/questions/55617859/why-does-this-hta-file-flash-a-large-square-before-displaying-the-image/55625474#55625474 -->
 
     <style> "Workaround for IE8" </style>
 
@@ -117,13 +125,6 @@
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
 
     alert(document.title);
-
-      window.resizeTo(width, height);
-
-      var x_offset = (screen.width - width)/2;
-      var y_offset = (screen.height - height)/2;
-
-      window.moveTo(x_offset, y_offset);
 
       // Debug via printing:
       //
