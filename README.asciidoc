@@ -5,7 +5,7 @@
 
 === The story
 
-@sskras thought it would be nice to have a simple installation framework which:
+https://github.com/sskras[@sskras] thought it would be nice to have a simple installation framework which:
 
   - would be text-based  +
     (could be fixed by hand / using notepad, with no rebuilding)
