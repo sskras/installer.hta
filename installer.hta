@@ -118,9 +118,6 @@
 
     alert(document.title);
 
-    function initial_window_placement()
-    {
- //   window.focus();
       window.resizeTo(width, height);
 
       var x_offset = (screen.width - width)/2;
@@ -144,10 +141,6 @@
  //   shell.Popup(debug_msg);
       //
       // Via: https://stackoverflow.com/questions/3106806/how-to-show-a-popup-without-a-browser/3112653#3112653
-    }
-
-    window.onload = initial_window_placement;
-    // Via: https://stackoverflow.com/questions/3166195/change-hta-application-window-size/16570529#16570529
 
     function disable_hotkeys()
     {
