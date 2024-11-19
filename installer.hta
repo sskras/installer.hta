@@ -35,6 +35,44 @@
 
     <title>TODO Installer title</title>
 
+    <style>
+      /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/Comments#syntax */
+
+      body {
+        /* Picked gray background color from the main window of "gBurner Virtual Drive 5.2 Setup": */
+        background-color: #F0F0F0;
+        /* Via: https://stackoverflow.com/questions/13712697/set-background-color-in-hex/75054561#75054561 */
+
+        font-family:  'MS Shell Dlg 2';
+        font-size:    11pt;
+        font-weight:  400;
+        font-style:   normal;
+        /* Via: https://learn.microsoft.com/en-us/windows/win32/intl/using-ms-shell-dlg-and-ms-shell-dlg-2 */
+        /* Via: https://forum.freecad.org/viewtopic.php?style=3&t=42414#p364805 */
+      }
+
+      input::-ms-clear
+      {
+        display: none;
+        /* Via: https://blog.maximerouiller.com/post/remove-the-x-from-internet-explorer-and-chrome-input-type-search/ */
+        /* Via: https://learn.microsoft.com/en-us/previous-versions/troubleshoot/browsers/development-website/how-to-hide-clear-button-ie-10 */
+
+        width : 0;
+        height: 0;
+        /* Via: https://stackoverflow.com/questions/10842665/internet-explorer-10-windows-8-remove-text-input-and-password-action-icons/17986002#17986002 */
+        /* Via: https://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs/14739092#14739092 */
+      }
+      /* Both of the above tricks fail on IE11 which emulates IE<=9 -- the input's clear button stays present.
+
+         Via: https://forum.profoundlogic.com/forum/viewtopic.php?t=1878#p6597
+         Via: https://stackoverflow.com/questions/31448563/deactivate-the-clear-button-in-input-fields-for-ie8
+         Via: https://stackoverflow.com/questions/19244916/remove-clear-field-x-button-when-browser-mode-ie9-document-modeie9-on-certa
+         Via: https://docs2.w3cub.com/css/::-ms-clear/#:~:text=supported%20only%20in%20Internet%20Explorer%2010%20and%2011%20and%20Edge%2012%2B
+         Via: https://yehg.net/lab/pr0js/misc/ie10-nopeeping/CSS/IE-10/
+         Via: https://jwcooney.com/2013/11/04/fixing-ie-10-text-box-x-and-sizing-issues/
+      */
+    </style>
+
     <HTA:APPLICATION
       APPLICATIONNAME = "installer.hta"         # Application name, used to identify a single application via SINGLEINSTANCE
       ICON            = "installer.ico"         # Application symbol
@@ -52,44 +90,6 @@
     <!-- Via: https://learn.microsoft.com/en-us/previous-versions/ms536495(v=vs.85) -->
 
   </head>
-
-  <style>
-    /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/Comments#syntax */
-
-    body {
-      /* Picked gray background color from the main window of "gBurner Virtual Drive 5.2 Setup": */
-      background-color: #F0F0F0;
-      /* Via: https://stackoverflow.com/questions/13712697/set-background-color-in-hex/75054561#75054561 */
-
-      font-family:  'MS Shell Dlg 2';
-      font-size:    11pt;
-      font-weight:  400;
-      font-style:   normal;
-      /* Via: https://learn.microsoft.com/en-us/windows/win32/intl/using-ms-shell-dlg-and-ms-shell-dlg-2 */
-      /* Via: https://forum.freecad.org/viewtopic.php?style=3&t=42414#p364805 */
-    }
-
-    input::-ms-clear
-    {
-      display: none;
-      /* Via: https://blog.maximerouiller.com/post/remove-the-x-from-internet-explorer-and-chrome-input-type-search/ */
-      /* Via: https://learn.microsoft.com/en-us/previous-versions/troubleshoot/browsers/development-website/how-to-hide-clear-button-ie-10 */
-
-      width : 0;
-      height: 0;
-      /* Via: https://stackoverflow.com/questions/10842665/internet-explorer-10-windows-8-remove-text-input-and-password-action-icons/17986002#17986002 */
-      /* Via: https://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs/14739092#14739092 */
-    }
-    /* Both of the above tricks fail on IE11 which emulates IE<=9 -- the input's clear button stays present.
-
-       Via: https://forum.profoundlogic.com/forum/viewtopic.php?t=1878#p6597
-       Via: https://stackoverflow.com/questions/31448563/deactivate-the-clear-button-in-input-fields-for-ie8
-       Via: https://stackoverflow.com/questions/19244916/remove-clear-field-x-button-when-browser-mode-ie9-document-modeie9-on-certa
-       Via: https://docs2.w3cub.com/css/::-ms-clear/#:~:text=supported%20only%20in%20Internet%20Explorer%2010%20and%2011%20and%20Edge%2012%2B
-       Via: https://yehg.net/lab/pr0js/misc/ie10-nopeeping/CSS/IE-10/
-       Via: https://jwcooney.com/2013/11/04/fixing-ie-10-text-box-x-and-sizing-issues/
-    */
-  </style>
 
   <script language="JScript">
 
