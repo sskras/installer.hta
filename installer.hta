@@ -10,7 +10,7 @@
 
 <html>
   <head>
-    <meta http-equiv="x-ua-compatible" content="IE=8" />
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
     <!-- Via: https://stackoverflow.com/questions/52800783/how-to-select-the-version-of-internet-explorer-for-hta-html-application/52801066#52801066 -->
     <!-- Via: https://stackoverflow.com/questions/24297029/hta-and-x-ua-compatible-meta-tag#:~:text=best%20overall%20results%20with%20IE%3D9%20or%20IE%3D10 -->
     <!-- Via: https://stackoverflow.com/questions/10975107/forcing-internet-explorer-9-to-use-standards-document-mode -->
@@ -170,6 +170,12 @@
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
 
+    function indicate_value(val)
+    {
+      alert(val);
+    }
+    // Via: https://www.w3schools.com/jsref/event_onchange.asp
+
   </script>
 
   <body>
@@ -218,7 +224,8 @@
 
         <td>
          <label form="Combo1">Let us see more choices:
-          <select size="1" name="Combo1" onChange="vbs:vbs_script_name">
+          <select size="1" name="Combo1" onChange="indicate_value(this.value)">
+          <!-- Via: https://www.w3schools.com/jsref/event_onchange.asp -->
             <option>A thing</option>
             <option>Another thing</option>
             <option>Yet another thing</option>
