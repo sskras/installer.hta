@@ -134,9 +134,12 @@
     {
       // Let's disable following hotkeys:
       //   - Ctrl-P         (avoid Printing dialog)
+      //   - Ctrl-Shift-P   (probably a no-op)
       //   - Ctrl-F5, F5    (avoid page reloads)
       //   - Ctrl-[-]       (avoid zooming out)
+      //   - Ctrl-Shift-[-]  -----"-----
       //   - Ctrl-[+]       (avoid zooming in)
+      //   - Ctrl-Shift-[+]  -----"-----
 
       VK_P         =  80;
       VK_F5        = 116;
@@ -151,7 +154,6 @@
       {
         if (ev.ctrlKey == false) return;
         if (ev.altKey == true) return;
-        if (ev.shiftKey == true) return;
       }
       else if ((ev.keyCode == VK_F5))
       {
