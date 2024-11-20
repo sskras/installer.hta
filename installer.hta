@@ -20,9 +20,9 @@
       * IE=7,8:
         - requires values of <select> to be declared as tag parameters;
           (this can be easily worked around, though)
-      * IE=5,7,8,9:
+      * IE=7,8,9:
         - breaks the Input Clear button removal;
-          (the button is unusual to see in a focused edit box )
+          (the button is unusual to see in a focused edit box, but it's pretty minor)
       * IE=8:
         - paints the inner border regardless of the <HTA INNERBORDER=...> parameter when the preceding element is not the <style>;
           (could be worked around by placing the empty <script> </script> element there)
@@ -33,11 +33,11 @@
         - breaks the <HTA> tag parsing;
           (most of window properties/fine-tunings are lost)
 
-          TODO: Research the possibility of starting HTA in IE=9 mode, but later switching
-                to a newer mode via NAVIGABLE=1 + document.location='2nd-stage.htm':
+      TODO: Research the possibility of starting HTA in IE=9 mode, but later switching
+            to a newer mode via NAVIGABLE=1 + document.location='2nd-stage.htm':
 
-          Via: https://stackoverflow.com/questions/24297029/hta-and-x-ua-compatible-meta-tag/35307743#35307743
-          Via: https://stackoverflow.com/questions/19567887/javascript-version-in-hta/19570684#comment90794240_19570684
+      Via: https://stackoverflow.com/questions/24297029/hta-and-x-ua-compatible-meta-tag/35307743#35307743
+      Via: https://stackoverflow.com/questions/19567887/javascript-version-in-hta/19570684#comment90794240_19570684
      -->
 
     <title>TODO Installer title</title>
