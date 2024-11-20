@@ -10,13 +10,16 @@
 
 <html>
   <head>
-    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <meta http-equiv="x-ua-compatible" content="IE=8" />
     <!-- Via: https://stackoverflow.com/questions/52800783/how-to-select-the-version-of-internet-explorer-for-hta-html-application/52801066#52801066 -->
     <!-- Via: https://stackoverflow.com/questions/24297029/hta-and-x-ua-compatible-meta-tag#:~:text=best%20overall%20results%20with%20IE%3D9%20or%20IE%3D10 -->
     <!-- Via: https://stackoverflow.com/questions/10975107/forcing-internet-explorer-9-to-use-standards-document-mode -->
     <!-- Via: https://hsivonen.fi/doctype/#ie8 -->
     <!-- Via: https://web.archive.org/web/20160114091626/https://blogs.msdn.microsoft.com/ie/2010/10/19/testing-sites-with-browser-mode-vs-doc-mode/ -->
     <!--
+      * IE=7,8:
+        - requires values of <select> to be declared as tag parameters;
+          (this can be easily worked around, though)
       * IE=5,7,8,9:
         - breaks the Input Clear button removal;
           (the button is unusual to see in a focused edit box )
@@ -226,9 +229,11 @@
          <label form="Combo1">Let us see more choices:
           <select size="1" name="Combo1" onChange="indicate_value(this.value)">
           <!-- Via: https://www.w3schools.com/jsref/event_onchange.asp -->
-            <option>A thing</option>
-            <option>Another thing</option>
-            <option>Yet another thing</option>
+            <option value="A thing">           A thing           </option>
+            <option value="Another thing">     Another thing     </option>
+            <option value="Yet another thing"> Yet another thing </option>
+	    <!-- Via: https://forum.jquery.com/portal/en/community/topic/ie8-change-function-on-a-form-select-not-working#topic_comment_container -->
+	    <!-- Via: https://www.experts-exchange.com/questions/22129174/JScript-Open-select-box-without-clicking-on-it.html#:~:text=%3Coption%20value%3D%22A%22%3EOption%20A%3C/option%3E -->
           </select>
          </label>
         </td>
