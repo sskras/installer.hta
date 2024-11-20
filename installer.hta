@@ -126,10 +126,6 @@
 
   <script language="JScript">
 
-    document.title = document.documentMode + ": " + navigator.userAgent;
-    // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
-    // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
-
     function disable_hotkeys()
     {
       // Let's disable following hotkeys:
@@ -169,6 +165,10 @@
 
     document.onkeydown = disable_hotkeys;
     // Via: https://stackoverflow.com/questions/1130353/disable-internet-explorer-shortcut-keys/5354547#5354547
+
+    document.title = document.documentMode + ": " + navigator.userAgent;
+    // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
+    // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
 
   </script>
 
