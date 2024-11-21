@@ -5,7 +5,8 @@
 
 === The story
 
-https://github.com/sskras[@sskras] thought it would be nice to have a simple installation framework which:
+https://github.com/sskras[@sskras] thought it would be nice
+to have a simple installation framework for Windows which:
 
   - would be text-based  +
     (could be fixed by hand / using notepad, with no rebuilding)
@@ -50,3 +51,31 @@ Via: https://en.wikipedia.org/wiki/Internet_Explorer_5
 ++++
 
 Which makes all three initial requirements satisfied.
+
+=== Initial try
+
+The initial idea is to have a single `.hta` file
+which would contain all the logic and most of data,
+and so would be a self-contained executable.
+
+So at first some fundamental things were ironed out --
+eg. a fixed size window having most of IE shortcut keys
+disabled, and being resistant to potential UI joggling
+using mouse.
+
+I took https://gitlab.com/chrismbradford/osd-wizard/-/commit/e709f9b3e7a97b21c6ffa8f4bbee5a5d1151e160[OSD_HTA.hta]
+from https://gitlab.com/chrismbradford/osd-wizard[gitlab.com/chrismbradford/osd-wizard]
+repository as a code-wise inspiration.  +
+I also used https://gburner-virtual-drive.en.lo4d.com/download[`gvd5-x64.exe`] installer
+of https://www.gburner.com/download.htm[gBurner Free] as the reference UI design.
+
+Basically it is a 640 x 480 size static window partitioned
+into several rows via `<table>`, and uses `MS Shell Dlg 2`
+font.
+
+As of commit https://github.com/sskras/installer.hta/commit/81fb12f59fbe53c66bc5f7ad4acc4fff7443dc57[81fb12f]
+it is a half assed mock-up of the aforementioned installer
+window.
+
+It looks like this on _Nov 22, 2024_:
+image::installer.png[]
