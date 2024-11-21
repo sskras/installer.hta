@@ -155,6 +155,12 @@
 
   <script language="JScript">
 
+    function indicate_value(val)
+    {
+      alert(val);
+    }
+    // Via: https://www.w3schools.com/jsref/event_onchange.asp
+
     function disable_hotkeys(e)
     {
       // Let's disable following hotkeys:
@@ -198,19 +204,6 @@
       ev.returnValue = null;
     }
 
-    document.onkeydown = disable_hotkeys;
-    // Via: https://stackoverflow.com/questions/1130353/disable-internet-explorer-shortcut-keys/5354547#5354547
-
-    document.title = document.documentMode + ": " + navigator.userAgent;
-    // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
-    // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
-
-    function indicate_value(val)
-    {
-      alert(val);
-    }
-    // Via: https://www.w3schools.com/jsref/event_onchange.asp
-
     function disable_mouse_events(e)
     {
       var ev = (e || window.event);
@@ -220,8 +213,16 @@
       return false;
     }
 
+    document.onkeydown = disable_hotkeys;
+    // Via: https://stackoverflow.com/questions/1130353/disable-internet-explorer-shortcut-keys/5354547#5354547
+
     document.onmousewheel = disable_mouse_events;
     // Via: http://stoimen.com/2009/07/01/javascript-disable-mouse-wheel/
+
+    document.title = document.documentMode + ": " + navigator.userAgent;
+    // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
+    // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
+
   </script>
 
   <body>
