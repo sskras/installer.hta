@@ -17,7 +17,9 @@ https://github.com/sskras[@sskras] thought it would be nice to have a simple ins
     (ones like Qt, Python, Perl, Lua, UI++)
 
 So he ran some research and chose the IE-based HTA -- HTML Application
-technology introduced in 1999 on IE5 that was supported on these OSes:
+technology introduced in 1999 along with IE5.
+
+IE5 was supported on these OSes:
 
   - Windows 3.1x
   - Windows NT 3.51
@@ -29,13 +31,13 @@ technology introduced in 1999 on IE5 that was supported on these OSes:
   - Solaris
   - HP-UX (up to 5.01 SP1)
 
-IE5 was bundled with:
+By default it was bundled with:
 
   - Windows 98 Second Edition
   - Windows 2000
   - Windows ME
 
-\... and so was the HTA support ...
+\... and so was the HTA support.
 
 Via: https://en.wikipedia.org/wiki/HTML_Application  +
 Via: https://en.wikipedia.org/wiki/Internet_Explorer_5
