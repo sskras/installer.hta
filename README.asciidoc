@@ -16,10 +16,14 @@ https://github.com/sskras[@sskras] thought it would be nice to have a simple ins
   - would have no 3rd party dependencies  +
     (ones like Qt, Python, Perl, Lua, UI++)
 
-So he ran some research and chose the IE-based HTA -- HTML Application
-technology introduced in 1999 along with IE5.
+So he ran some research and chose the Internet Explorer (IE)-based HTA
+-- HTML Application technology introduced in 1999 along with IE5.
 
+++++
+<details><summary>
 IE5 was supported on these OSes:
+</summary>
+++++
 
   - Windows 3.1x
   - Windows NT 3.51
@@ -41,5 +45,8 @@ By default it was bundled with:
 
 Via: https://en.wikipedia.org/wiki/HTML_Application  +
 Via: https://en.wikipedia.org/wiki/Internet_Explorer_5
+++++
+</details>
+++++
 
-\... which makes all three initial requirements satisfied.
+Which makes all three initial requirements satisfied.
