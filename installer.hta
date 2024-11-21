@@ -10,7 +10,7 @@
 
 <html>
   <head>
-    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <meta http-equiv="x-ua-compatible" content="IE=10" />
     <!-- Via: https://stackoverflow.com/questions/52800783/how-to-select-the-version-of-internet-explorer-for-hta-html-application/52801066#52801066 -->
     <!-- Via: https://stackoverflow.com/questions/24297029/hta-and-x-ua-compatible-meta-tag#:~:text=best%20overall%20results%20with%20IE%3D9%20or%20IE%3D10 -->
     <!-- Via: https://stackoverflow.com/questions/10975107/forcing-internet-explorer-9-to-use-standards-document-mode -->
@@ -23,6 +23,8 @@
       * IE=7,8,9:
         - breaks the Input Clear button removal;
           (the button is unusual to see in a focused edit box, but it's pretty minor)
+        - provides no HTML way to disable content zooming;
+          Via: https://stackoverflow.com/questions/11183174/simplest-way-to-detect-a-pinch/11183302#comment51852037_11183302
       * IE=8:
         + paints the inner border regardless of the <HTA INNERBORDER=...> parameter when the preceding element is not the <style>;
           (could be worked around by placing the empty <script> </script> element there)
@@ -62,6 +64,11 @@
         font-style:   normal;
         /* Via: https://learn.microsoft.com/en-us/windows/win32/intl/using-ms-shell-dlg-and-ms-shell-dlg-2 */
         /* Via: https://forum.freecad.org/viewtopic.php?style=3&t=42414#p364805 */
+
+        -ms-touch-action: none !important;
+        -ms-content-zooming: none !important;
+        /* Via: https://stackoverflow.com/questions/12406329/detecting-pinch-zoom-in-ie10-without-preventing-default-behavior/12719554#12719554 */
+        /* Via: https://learn.microsoft.com/en-us/archive/blogs/askie/how-to-implement-the-ms-touch-action-none-property-to-disable-double-tap-zoom-on-windows-touch-devices */
       }
 
       input::-ms-clear
