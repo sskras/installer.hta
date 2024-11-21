@@ -10,7 +10,7 @@
 
 <html>
   <head>
-    <meta http-equiv="x-ua-compatible" content="IE=10" />
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
     <!-- Via: https://stackoverflow.com/questions/52800783/how-to-select-the-version-of-internet-explorer-for-hta-html-application/52801066#52801066 -->
     <!-- Via: https://stackoverflow.com/questions/24297029/hta-and-x-ua-compatible-meta-tag#:~:text=best%20overall%20results%20with%20IE%3D9%20or%20IE%3D10 -->
     <!-- Via: https://stackoverflow.com/questions/10975107/forcing-internet-explorer-9-to-use-standards-document-mode -->
@@ -20,18 +20,35 @@
       * IE=7,8:
         - requires values of <select> to be declared as tag parameters;
           (this can be easily worked around, though)
+
       * IE=7,8,9:
         - breaks the Input Clear button removal;
           (the button is unusual to see in a focused edit box, but it's pretty minor)
+
         - provides no HTML way to disable content zooming;
           Via: https://stackoverflow.com/questions/11183174/simplest-way-to-detect-a-pinch/11183302#comment51852037_11183302
+
+          Could be worked around by switching value of `mshta.exe`:REG_DWORD from 0x0 to 0x1 in the registry key:
+              HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_NINPUT_LEGACYMODE
+          ... and by blocking `mousewheel` events then (which now we do).
+          Via: https://stackoverflow.com/questions/32069000/how-to-block-zooming-by-two-fingers-tapping-in-a-web-browser-control/32069563#32069563
+
+          TODO:
+            - Detect value in FEATURE_NINPUT_LEGACYMODE (if any) on startup,
+            - rewrite it to 1 (if not present already),
+            - memorize the changes,
+            - relaunch the HTA,
+            - restore the changes.
+
       * IE=8:
         + paints the inner border regardless of the <HTA INNERBORDER=...> parameter when the preceding element is not the <style>;
           (could be worked around by placing the empty <script> </script> element there)
+
       * IE=9,10,11:
         + breaks blocking the intercepted hotkeys;
           (so the content becomes zoomable using Ctrl-[-] and Ctrl-[+] again)
 	  (easily worked around with non-IE JS magic)
+
       * IE=10,11:
         - breaks the <HTA> tag parsing;
           (most of window properties/fine-tunings are lost)
@@ -193,6 +210,17 @@
     }
     // Via: https://www.w3schools.com/jsref/event_onchange.asp
 
+    function disable_mouse_events(e)
+    {
+      var ev = (e || window.event);
+
+      ev.returnValue = false;
+      ev.cancelBubble = true;
+      return false;
+    }
+
+    document.onmousewheel = disable_mouse_events;
+    // Via: http://stoimen.com/2009/07/01/javascript-disable-mouse-wheel/
   </script>
 
   <body>
