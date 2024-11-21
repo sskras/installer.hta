@@ -138,7 +138,8 @@
       APPLICATIONNAME = "installer.hta"         # Application name, used to identify a single application via SINGLEINSTANCE
       ICON            = "installer.ico"         # Application symbol
       BORDER          = "dialog"                # Make window non-resizable
-      CONTEXTMENU     = "no"                    # Turn off the context (pop up) menu
+      CONTEXTMENU     = "yes"                   # Leave the context menu working (the default) since it is already
+                                                # ... ignored by most of controls (except edit boxes, where we need it)
       INNERBORDER     = "no"                    # Turn off the thin inner lines
       MAXIMIZEBUTTON  = "no"                    # Disable maximizing the window
       MINIMIZEBUTTON  = "yes"                   # Enable minimizing the window
