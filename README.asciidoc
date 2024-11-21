@@ -78,4 +78,5 @@ it is a half assed mock-up of the aforementioned installer
 window.
 
 It looks like this on _Nov 22, 2024_:
+
 image::installer.png[]
