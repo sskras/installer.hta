@@ -63,16 +63,15 @@
     <title>TODO Installer title</title>
 
     <!-- Installer parameters: --> <script>
+
       default_install_dir = "C:\\midipix";
+
+      width  = 640;
+      height = 480;
     </script>
 
     <style>
       /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/Comments#syntax */
-
-      window {
-        width:  640px;
-        height: 480px;
-      }
 
       body {
         /* Picked gray background color from the main window of "gBurner Virtual Drive 5.2 Setup": */
@@ -115,18 +114,6 @@
     </style>
 
     <script>
-      var str_w  = document.styleSheets[0].rules[0].style['width'];
-      var str_h  = document.styleSheets[0].rules[0].style['height']
-      // Via: https://stackoverflow.com/questions/16778814/read-css-property-from-stylesheet/16778879#16778879
-      // Via: https://stackoverflow.com/questions/9180184/access-css-file-contents-via-javascript/9180271#9180271
-      // Via: https://stackoverflow.com/questions/38059852/what-is-the-difference-between-the-cssrules-and-rules-objects#comment63559081_38059852
-      // Via: https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration
-      // Via: https://stackoverflow.com/questions/56586320/is-there-a-difference-between-getpropertyvalue-and-the-bracket-notation-for
-
-      var width  = Number(str_w.replace(/px$/, ''));
-      var height = Number(str_h.replace(/px$/, ''));
-      // Via: https://stackoverflow.com/questions/3024084/jquery-javascript-how-do-i-convert-a-pixel-value-20px-to-a-number-value-2
-
       window.resizeTo(width, height);
 
       var x_offset = (screen.width - width)/2;
