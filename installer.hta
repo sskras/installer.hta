@@ -62,6 +62,10 @@
 
     <title>TODO Installer title</title>
 
+    <!-- Installer parameters: --> <script>
+      default_install_dir = "C:\\midipix";
+    </script>
+
     <style>
       /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/Comments#syntax */
 
@@ -176,7 +180,9 @@
 
         <td>
           Let us input some text:
-          <input size="30" name="Text1">
+          <input size="30" id="destination_folder">
+          <!-- We use no forms (so far)
+          Via: https://stackoverflow.com/questions/1397592/difference-between-id-and-name-attributes-in-html/1397613#1397613 -->
         </td>
       </tr>
 
@@ -286,6 +292,8 @@
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
 
+    destination_folder.value = default_install_dir;
+    // Via: https://stackoverflow.com/questions/7609130/set-the-default-value-of-an-input-field/62598728#62598728
   </script>
 
 </html>
