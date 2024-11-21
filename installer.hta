@@ -153,6 +153,69 @@
 
   </head>
 
+  <body>
+    Welcome to the app setup:
+    <hr/>
+
+    <table width="100%" cellspacing="0" border="0">
+
+      <tr>
+        <td>
+          Line 1:
+        </td>
+
+        <td align="right">
+          EOL
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Line 2:
+        </td>
+
+        <td>
+          Let us input some text:
+          <input size="30" name="Text1">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Line 3:
+        </td>
+
+        <td>
+          Let us make a selection:
+          <input type="radio" name="Options1" value="Yes">Yes</input>
+          <input type="radio" name="Options1" value="No" checked>No</input>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Line 4:
+        </td>
+
+        <td>
+         <label form="Combo1">Let us see more choices:
+          <select size="1" name="Combo1" onChange="indicate_value(this.value)">
+          <!-- Via: https://www.w3schools.com/jsref/event_onchange.asp -->
+            <option value="A thing">           A thing           </option>
+            <option value="Another thing">     Another thing     </option>
+            <option value="Yet another thing"> Yet another thing </option>
+	    <!-- Via: https://forum.jquery.com/portal/en/community/topic/ie8-change-function-on-a-form-select-not-working#topic_comment_container -->
+	    <!-- Via: https://www.experts-exchange.com/questions/22129174/JScript-Open-select-box-without-clicking-on-it.html#:~:text=%3Coption%20value%3D%22A%22%3EOption%20A%3C/option%3E -->
+          </select>
+         </label>
+        </td>
+      </tr>
+
+    </table>
+    <!-- Via: https://gitlab.com/chrismbradford/osd-wizard/-/commit/e709f9b3e7a97b21c6ffa8f4bbee5a5d1151e160 -->
+
+  </body>
+
   <script language="JScript">
 
     function indicate_value(val)
@@ -225,66 +288,4 @@
 
   </script>
 
-  <body>
-    Welcome to the app setup:
-    <hr/>
-
-    <table width="100%" cellspacing="0" border="0">
-
-      <tr>
-        <td>
-          Line 1:
-        </td>
-
-        <td align="right">
-          EOL
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Line 2:
-        </td>
-
-        <td>
-          Let us input some text:
-          <input size="30" name="Text1">
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Line 3:
-        </td>
-
-        <td>
-          Let us make a selection:
-          <input type="radio" name="Options1" value="Yes">Yes</input>
-          <input type="radio" name="Options1" value="No" checked>No</input>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Line 4:
-        </td>
-
-        <td>
-         <label form="Combo1">Let us see more choices:
-          <select size="1" name="Combo1" onChange="indicate_value(this.value)">
-          <!-- Via: https://www.w3schools.com/jsref/event_onchange.asp -->
-            <option value="A thing">           A thing           </option>
-            <option value="Another thing">     Another thing     </option>
-            <option value="Yet another thing"> Yet another thing </option>
-	    <!-- Via: https://forum.jquery.com/portal/en/community/topic/ie8-change-function-on-a-form-select-not-working#topic_comment_container -->
-	    <!-- Via: https://www.experts-exchange.com/questions/22129174/JScript-Open-select-box-without-clicking-on-it.html#:~:text=%3Coption%20value%3D%22A%22%3EOption%20A%3C/option%3E -->
-          </select>
-         </label>
-        </td>
-      </tr>
-
-    </table>
-    <!-- Via: https://gitlab.com/chrismbradford/osd-wizard/-/commit/e709f9b3e7a97b21c6ffa8f4bbee5a5d1151e160 -->
-
-  </body>
 </html>
