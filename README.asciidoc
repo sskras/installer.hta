@@ -67,7 +67,9 @@ I took https://gitlab.com/chrismbradford/osd-wizard/-/commit/e709f9b3e7a97b21c6f
 from https://gitlab.com/chrismbradford/osd-wizard[gitlab.com/chrismbradford/osd-wizard]
 repository as a code-wise inspiration.  +
 I also used https://gburner-virtual-drive.en.lo4d.com/download[`gvd5-x64.exe`] installer
-of https://www.gburner.com/download.htm[gBurner Free] as the reference UI design.
+of https://www.gburner.com/download.htm[gBurner Free] as the reference UI design:
+
+image::installer-of-gBurner-Virtual-Drive-5.2.png[]
 
 Basically it is a 640 x 480 size static window partitioned
 into several rows via `<table>`, and uses `MS Shell Dlg 2`
