@@ -18,7 +18,10 @@ to have a simple installation framework for Windows which:
     (ones like Qt, Python, Perl, Lua, UI++)
 
 So he ran some research and chose the Internet Explorer (IE)-based HTA
--- HTML Application technology introduced in 1999 along with IE5.
+-- https://en.wikipedia.org/wiki/HTML_Application[HTML Application]
+technology introduced in 1999 along with
+https://en.wikipedia.org/wiki/Internet_Explorer_5[IE5].
+
 
 ++++
 <details><summary>
@@ -44,8 +47,6 @@ By default it was bundled with:
 
 \... and so was the HTA support.
 
-Via: https://en.wikipedia.org/wiki/HTML_Application  +
-Via: https://en.wikipedia.org/wiki/Internet_Explorer_5
 ++++
 </details>
 ++++
