@@ -102,8 +102,13 @@
         font-style:   normal;
       }
 
-      /* TODO: Fix color for the unfocused input too */
       /* Via: https://htmlcolors.com/google-color-picker */
+
+      input[type=text]
+      {
+        border-color: #FFFFFF; /* Becomes gray */
+      }
+      /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border#formal_definition */
 
       input[type=text]:focus
       {
