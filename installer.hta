@@ -91,6 +91,13 @@
         /* Via: https://learn.microsoft.com/en-us/archive/blogs/askie/how-to-implement-the-ms-touch-action-none-property-to-disable-double-tap-zoom-on-windows-touch-devices */
       }
 
+      input[type=text]:focus
+      {
+        /* Alternative, maybe better looking value: 2px solid #5faae6; */
+        border: 1px solid #3896e0;
+	/* Via: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2 */
+      }
+
       input::-ms-clear
       {
         display: none;
@@ -176,7 +183,7 @@
 
         <td>
           Destination Folder:
-          <input size="30" id="destination_folder">
+          <input type="text" size="30" id="destination_folder">
           <!-- We use no forms (so far)
           Via: https://stackoverflow.com/questions/1397592/difference-between-id-and-name-attributes-in-html/1397613#1397613 -->
         </td>
