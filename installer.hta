@@ -145,20 +145,21 @@
          Via: https://jwcooney.com/2013/11/04/fixing-ie-10-text-box-x-and-sizing-issues/
       */
 
-      table, td
+      table.debug_lines,
+      table.debug_lines td
       /* Via: https://www.w3schools.com/css/css_table.asp */
       {
         border-style: dashed;
         border-width: 1px;
       }
 
-      td
+      table.debug_lines td
       {
         border-color: red;
 	/* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border#values */
       }
 
-      table
+      table.debug_lines
       {
         /* Remove to get table/cells borders separated -- effectively double sizing them: */
     /*  border-collapse: collapse;  */
@@ -205,7 +206,7 @@
   </head>
 
   <body>
-    <table>
+    <table class="debug_lines">
 
       <tr>
         <td colspan="2">
