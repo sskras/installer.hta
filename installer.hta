@@ -47,7 +47,7 @@
       * IE=9,10,11:
         + breaks blocking the intercepted hotkeys;
           (so the content becomes zoomable using Ctrl-[-] and Ctrl-[+] again)
-	  (easily worked around with non-IE JS magic)
+          (easily worked around with non-IE JS magic)
 
       * IE=10,11:
         - breaks the <HTA> tag parsing;
@@ -90,7 +90,7 @@
         /* Via: https://stackoverflow.com/questions/12406329/detecting-pinch-zoom-in-ie10-without-preventing-default-behavior/12719554#12719554 */
         /* Via: https://learn.microsoft.com/en-us/archive/blogs/askie/how-to-implement-the-ms-touch-action-none-property-to-disable-double-tap-zoom-on-windows-touch-devices */
 
-	/* Size of the internal border: */
+        /* Size of the internal border: */
         margin: 9px;
       }
 
@@ -112,8 +112,8 @@
         /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border#formal_definition */
         height: 20px;
         padding-bottom: 1px;
-	/* Via: https://www.freecodecamp.org/news/html-padding-css-padding-order/#heading-padding-bottom-property */
-	/* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/padding#formal_definition */
+        /* Via: https://www.freecodecamp.org/news/html-padding-css-padding-order/#heading-padding-bottom-property */
+        /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/padding#formal_definition */
         text-indent: 6px;
         /* Via: https://stackoverflow.com/questions/12046638/css-text-indent-on-input-field-doesnt-update-the-caret-position-until-you-start */
       }
@@ -121,7 +121,7 @@
       input[type=text]:focus
       {
         border-color: #67ACE2; /* Becomes bluish */
-	/* Via: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2 */
+        /* Via: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2 */
       }
 
       input::-ms-clear
@@ -145,6 +145,13 @@
          Via: https://jwcooney.com/2013/11/04/fixing-ie-10-text-box-x-and-sizing-issues/
       */
 
+      table
+      {
+        border-spacing: 0px;
+        border-style: none;
+        border-width: 0px;
+      }
+
       table.debug_lines,
       table.debug_lines td
       /* Via: https://www.w3schools.com/css/css_table.asp */
@@ -156,7 +163,7 @@
       table.debug_lines td
       {
         border-color: red;
-	/* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border#values */
+        /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border#values */
       }
 
       table.debug_lines
@@ -164,7 +171,7 @@
         border-color: blue;
         /* Seems to be mutually exclusive with `border-collapse: collapse` -- only one needs to be present: */
         border-spacing: 0px;
-	/* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border-spacing */
+        /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border-spacing */
       }
 
       table.debug_thin
@@ -295,8 +302,8 @@
             <option value="A thing">           A thing           </option>
             <option value="Another thing">     Another thing     </option>
             <option value="Yet another thing"> Yet another thing </option>
-	    <!-- Via: https://forum.jquery.com/portal/en/community/topic/ie8-change-function-on-a-form-select-not-working#topic_comment_container -->
-	    <!-- Via: https://www.experts-exchange.com/questions/22129174/JScript-Open-select-box-without-clicking-on-it.html#:~:text=%3Coption%20value%3D%22A%22%3EOption%20A%3C/option%3E -->
+            <!-- Via: https://forum.jquery.com/portal/en/community/topic/ie8-change-function-on-a-form-select-not-working#topic_comment_container -->
+            <!-- Via: https://www.experts-exchange.com/questions/22129174/JScript-Open-select-box-without-clicking-on-it.html#:~:text=%3Coption%20value%3D%22A%22%3EOption%20A%3C/option%3E -->
           </select>
          </label>
         </td>
