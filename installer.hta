@@ -144,6 +144,15 @@
          Via: https://yehg.net/lab/pr0js/misc/ie10-nopeeping/CSS/IE-10/
          Via: https://jwcooney.com/2013/11/04/fixing-ie-10-text-box-x-and-sizing-issues/
       */
+
+      table, td
+      /* Via: https://www.w3schools.com/css/css_table.asp */
+      {
+        border-style: solid;
+        border-width: 1px;
+      }
+      /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse#a_colorful_table_of_browser_engines */
+
     </style>
 
     <script>
@@ -180,8 +189,7 @@
   </head>
 
   <body>
-    <!-- To debug main layout set border="10" or so: -->
-    <table width="100%" cellspacing="0" border="0">
+    <table width="100%" cellspacing="0">
 
       <tr>
         <td colspan="2">
