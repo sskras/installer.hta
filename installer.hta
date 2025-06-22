@@ -161,13 +161,16 @@
 
       table.debug_lines
       {
-        /* Remove to get table/cells borders separated -- effectively double sizing them: */
-    /*  border-collapse: collapse;  */
-        /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse#a_colorful_table_of_browser_engines */
         border-color: blue;
         /* Seems to be mutually exclusive with `border-collapse: collapse` -- only one needs to be present: */
         border-spacing: 0px;
 	/* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border-spacing */
+      }
+
+      table.debug_thin
+      {
+        border-collapse: collapse;
+        /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse#a_colorful_table_of_browser_engines */
       }
 
       table.debug_transparent,
@@ -212,7 +215,7 @@
   </head>
 
   <body>
-    <table class="debug_lines -debug_transparent">
+    <table class="debug_lines debug_thin -debug_transparent">
 
       <tr>
         <td colspan="2">
