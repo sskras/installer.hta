@@ -148,12 +148,19 @@
       table, td
       /* Via: https://www.w3schools.com/css/css_table.asp */
       {
-        border-style: solid;
+        border-style: dashed;
         border-width: 1px;
+      }
+
+      td
+      {
+        border-color: red;
+	/* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border#values */
       }
 
       table
       {
+        border-color: blue;
         /* Remove to get table/cells borders separated -- effectively double sizing them: */
         border-collapse: collapse;
       }
