@@ -169,8 +169,12 @@
       table.debug_lines
       {
         border-color: blue;
+      }
+
+      table.debug_space
+      {
         /* Seems to be mutually exclusive with `border-collapse: collapse` -- only one needs to be present: */
-        border-spacing: 0px;
+        border-spacing: 10px;
         /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border-spacing */
       }
 
@@ -222,7 +226,7 @@
   </head>
 
   <body>
-    <table class="-debug_lines -debug_thin -debug_transparent">
+    <table class="debug_lines debug_space -debug_thin -debug_transparent">
 
       <tr>
         <td colspan="2">
