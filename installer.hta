@@ -152,40 +152,40 @@
         border-width: 0px;
       }
 
-      table.debug_lines,
-      table.debug_lines td
+      table.grid_lines,
+      table.grid_lines td
       /* Via: https://www.w3schools.com/css/css_table.asp */
       {
         border-style: dashed;
         border-width: 1px;
       }
 
-      table.debug_lines td
+      table.grid_lines td
       {
         border-color: red;
         /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border#values */
       }
 
-      table.debug_lines
+      table.grid_lines
       {
         border-color: blue;
       }
 
-      table.debug_space
+      table.grid_space
       {
         /* Seems to be mutually exclusive with `border-collapse: collapse` -- only one needs to be present: */
         border-spacing: 10px;
         /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border-spacing */
       }
 
-      table.debug_thin
+      table.grid_thin
       {
         border-collapse: collapse;
         /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse#a_colorful_table_of_browser_engines */
       }
 
-      table.debug_transparent,
-      table.debug_transparent td
+      table.grid_transp,
+      table.grid_transp td
       {
         border-color: transparent;
       }
@@ -226,7 +226,7 @@
   </head>
 
   <body>
-    <table class="-debug_lines -debug_space -debug_thin -debug_transparent">
+    <table class="-grid_lines -grid_space -grid_thin -grid_transp">
 
       <tr>
         <td colspan="2">
