@@ -152,6 +152,14 @@
         border-width: 0px;
       }
 
+      table tr.heading
+      {
+        /* Hide the heading row: */
+        visibility: collapse;
+        /* TODO Has the minor effect of hiding the upper table border when combined with `border-collapse: collapse`. */
+        /* Via: https://stackoverflow.com/questions/34960179/tr-td-height-refuses-to-be-0/78771328#78771328 */
+      }
+
       table td.row_number
       {
         /* Width of the leftmost column to contain a layout's row number: */
@@ -236,7 +244,7 @@
   <body>
     <table class="-grid_lines -grid_space -grid_thin -grid_transp">
 
-      <tr>
+      <tr class="heading">
         <td class="row_number" />
         <td class="row_controls" />
       </tr>
