@@ -152,6 +152,13 @@
         border-width: 0px;
       }
 
+      table td.row_number
+      {
+        /* Width of the leftmost column to contain a layout's row number: */
+        width: 32px;
+        /* Via: https://stackoverflow.com/questions/928849/setting-table-column-width/928856#928856 */
+      }
+
       table.grid_lines,
       table.grid_lines td
       /* Via: https://stackoverflow.com/questions/1257430/how-can-i-apply-a-border-only-inside-a-table */
@@ -228,6 +235,12 @@
 
   <body>
     <table class="-grid_lines -grid_space -grid_thin -grid_transp">
+
+      <tr>
+        <td class="row_number" />
+        <td class="row_controls" />
+      </tr>
+      <!-- Via: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#try_it -->
 
       <tr>
         <td colspan="2">
