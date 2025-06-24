@@ -154,6 +154,13 @@
         border-width: 0px;
       }
 
+      table tr.heading
+      {
+        /* Client area heading is white: */
+        background-color: #FFFFFF;
+        /* Via: https://stackoverflow.com/questions/5680753/how-to-get-css-background-color-on-tr-tag-to-span-entire-row */
+      }
+
       table tr.null
       {
         /* Hide the formal heading row: */
@@ -252,7 +259,7 @@
       </tr>
       <!-- Via: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#try_it -->
 
-      <tr>
+      <tr class="heading">
         <td colspan="2">
           Welcome to the app setup:
           <hr/>
