@@ -208,11 +208,11 @@
         border-color: transparent;
       }
 
-      table td.heading
+      table td.header
       /* Since <tr> borders require <table> to `border-collapse`, use <td> instead. */
       /* Via: https://stackoverflow.com/questions/10040842/add-border-bottom-to-table-row-tr */
       {
-        /* Client area heading is white: */
+        /* Client area header is white: */
         background-color: #FFFFFF;
         /* Via: https://stackoverflow.com/questions/5680753/how-to-get-css-background-color-on-tr-tag-to-span-entire-row */
         border-style: none;
@@ -266,7 +266,7 @@
       <!-- Via: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#try_it -->
 
       <tr class="heading">
-        <td class="heading" colspan="2">
+        <td class="header" colspan="2">
         <!-- Via: https://stackoverflow.com/questions/2403990/html-colspan-in-css/2579484#2579484 -->
           <div>
             Choose Install Location <br />
@@ -276,6 +276,7 @@
             Choose the folder in which to install gBurner Virtual Drive 5.2. <br />
           </div>
           <!-- Via: https://github.com/kichik/nsis/blob/691211035c2aaaebe8fbca48ee02d4de93594a52/Contrib/nsDialogs/welcome.nsi#L130 -->
+          <!-- `header`, `text`, and `subtext` come from the NSIS source code. -->
           Welcome to the app setup:
           <hr/>
         </td>
