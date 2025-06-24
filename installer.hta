@@ -154,7 +154,9 @@
         border-width: 0px;
       }
 
-      table tr.heading
+      table td.heading
+      /* Since <tr> borders require <table> to `border-collapse`, use <td> instead. */
+      /* Via: https://stackoverflow.com/questions/10040842/add-border-bottom-to-table-row-tr */
       {
         /* Client area heading is white: */
         background-color: #FFFFFF;
@@ -260,7 +262,8 @@
       <!-- Via: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#try_it -->
 
       <tr class="heading">
-        <td colspan="2">
+        <td class="heading" colspan="2">
+        <!-- Via: https://stackoverflow.com/questions/2403990/html-colspan-in-css/2579484#2579484 -->
           Welcome to the app setup:
           <hr/>
         </td>
