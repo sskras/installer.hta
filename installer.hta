@@ -91,7 +91,9 @@
         /* Via: https://learn.microsoft.com/en-us/archive/blogs/askie/how-to-implement-the-ms-touch-action-none-property-to-disable-double-tap-zoom-on-windows-touch-devices */
 
         /* Size of the internal border: */
-        margin: 9px;
+        margin: 0px;
+        /* 0px means there is no space left outside the main table, and the app will
+           draw pixels up to edges of the whole client area using the main table. */
       }
 
       input, select
