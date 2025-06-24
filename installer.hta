@@ -154,17 +154,6 @@
         border-width: 0px;
       }
 
-      table td.heading
-      /* Since <tr> borders require <table> to `border-collapse`, use <td> instead. */
-      /* Via: https://stackoverflow.com/questions/10040842/add-border-bottom-to-table-row-tr */
-      {
-        /* Client area heading is white: */
-        background-color: #FFFFFF;
-        /* Via: https://stackoverflow.com/questions/5680753/how-to-get-css-background-color-on-tr-tag-to-span-entire-row */
-        border-color: gold;
-        border-style: solid;
-      }
-
       table tr.null
       {
         /* Hide the formal heading row: */
@@ -219,6 +208,17 @@
         border-color: transparent;
       }
 
+      table td.heading
+      /* Since <tr> borders require <table> to `border-collapse`, use <td> instead. */
+      /* Via: https://stackoverflow.com/questions/10040842/add-border-bottom-to-table-row-tr */
+      {
+        /* Client area heading is white: */
+        background-color: #FFFFFF;
+        /* Via: https://stackoverflow.com/questions/5680753/how-to-get-css-background-color-on-tr-tag-to-span-entire-row */
+        border-color: gold;
+        border-style: solid;
+      }
+
     </style>
 
     <script>
@@ -255,7 +255,7 @@
   </head>
 
   <body>
-    <table class="-grid_lines -grid_space -grid_thin -grid_transp">
+    <table class=" grid_lines -grid_space -grid_thin -grid_transp">
 
       <tr class="null">
         <td class="row_number" />
