@@ -221,6 +221,18 @@
         border-bottom-width: 1px;
       }
 
+      table td.header div.text
+      {
+        font-family: 'MS Shell Dlg';
+        /* Via: https://forums.winamp.com/forum/developer-center/nsis-discussion/260422-use-the-default-vista-font#post3277625:~:text=the%20original%20%22MS%20Shell%20Dlg%22%20pseudofont */
+        /* Via: https://github.com/kichik/nsis/blob/edb3b50/Contrib/UIs/modern.rc#L51-L71 */
+        font-size: 9.2pt;
+        font-weight: bold;
+        /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-weight#values */
+        margin-left: 17px;
+        margin-top: 8px;
+      }
+
     </style>
 
     <script>
@@ -265,10 +277,10 @@
       </tr>
       <!-- Via: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#try_it -->
 
-      <tr class="heading">
+      <tr class="header">
         <td class="header" colspan="2">
         <!-- Via: https://stackoverflow.com/questions/2403990/html-colspan-in-css/2579484#2579484 -->
-          <div>
+          <div class="text">
             Choose Install Location <br />
           </div>
 
@@ -277,6 +289,7 @@
           </div>
           <!-- Via: https://github.com/kichik/nsis/blob/691211035c2aaaebe8fbca48ee02d4de93594a52/Contrib/nsDialogs/welcome.nsi#L130 -->
           <!-- `header`, `text`, and `subtext` come from the NSIS source code. -->
+          <!-- Via: https://github.com/kichik/nsis/blob/691211035c2aaaebe8fbca48ee02d4de93594a52/Contrib/Modern%20UI%202/Pages.nsh#L81 -->
           Welcome to the app setup:
           <hr/>
         </td>
