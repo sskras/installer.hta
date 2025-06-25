@@ -152,6 +152,8 @@
         border-spacing: 0px;
         border-style: none;
         border-width: 0px;
+        /* Make main table occupy the whole client area: */
+        width: 100%;
       }
 
       table tr.null
@@ -299,8 +301,10 @@
           <!-- Via: https://github.com/kichik/nsis/blob/691211035c2aaaebe8fbca48ee02d4de93594a52/Contrib/nsDialogs/welcome.nsi#L130 -->
           <!-- `header`, `text`, and `subtext` come from the NSIS source code. -->
           <!-- Via: https://github.com/kichik/nsis/blob/691211035c2aaaebe8fbca48ee02d4de93594a52/Contrib/Modern%20UI%202/Pages.nsh#L81 -->
+      <!--
           Welcome to the app setup:
           <hr/>
+       -->
         </td>
       </tr>
 
@@ -309,10 +313,12 @@
         <!-- Via: https://www.computerhope.com/issues/ch001655.htm#colspan -->
           Setup will install gBurner Virtual Drive 5.2 in the following folder. To install in a different <br />
           folder, click Browse and select another folder. Click Install to start the installation.
+      <!--
           <br />
           <br />
           The setup is going to install This TODO Software X.Y in the following folder.
           To install in a different folder, click Browse and select another folder.
+       -->
         </td>
       </tr>
 
