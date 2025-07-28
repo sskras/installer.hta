@@ -411,6 +411,26 @@
     }
     // Via: https://www.w3schools.com/jsref/event_onchange.asp
 
+    function dprint(str)
+    {
+      document.title = str;
+    }
+
+    function humane(el)
+    {
+      return el.value || el.textContent;
+    }
+
+    function prop_list(obj)
+    {
+      var list = "";
+
+      for (var prop in obj)
+        list = list + prop + "\n";
+
+      return list;
+    }
+
     function disable_hotkeys(e)
     {
       // Let's disable following hotkeys:
