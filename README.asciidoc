@@ -83,3 +83,17 @@ window.
 It looks like this on _Aug 04, 2025_:
 
 image::installer.png[]
+
+
+=== Debugging
+
+Some debug measures are implemented now.  If table classes
+`grid_lines` and `grid_thin` are enabled, eg:
+[source,html]
+----
+    <table class="grid_lines grid_thin ...">
+----
+
+... it gets somewhat easier to see the actual GUI layout:
+
+image::installer-gridlines.png[]
