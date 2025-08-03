@@ -266,7 +266,8 @@
 
     <HTA:APPLICATION
       APPLICATIONNAME = "installer.hta"         # Application name, used to identify a single application via SINGLEINSTANCE
-      ICON            = "installer.ico"         # Application symbol
+      ICON            = "xwizards.dll"          # Application symbol; use the stock one provided by Win7+ for now
+                                                # Via: https://github.com/cyqsimon/W10-Ico-Ref/blob/d0a6949/README.md?plain=1#L179-L181
       BORDER          = "dialog"                # Window (the outer) border. Make window non-resizable
       CONTEXTMENU     = "yes"                   # Leave the context menu working (the default) since it is already
                                                 # ... ignored by most of controls (except edit boxes, where we need it)
