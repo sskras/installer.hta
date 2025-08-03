@@ -94,6 +94,6 @@ Some debug measures are implemented now.  If table classes
     <table class="grid_lines grid_thin ...">
 ----
 
-... it gets somewhat easier to see the actual GUI layout:
+\... it gets somewhat easier to see the actual GUI layout:
 
 image::installer-gridlines.png[]
