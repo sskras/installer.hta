@@ -76,11 +76,8 @@ Basically it is a 640 x 480 size static window partitioned
 into several rows via `<table>`, which uses `MS Shell Dlg 2`
 font.
 
-As of commit https://github.com/sskras/installer.hta/commit/ee221c0b6ad979b5a3149cccd7e17c7d5bc2e717[ee221c0]
-it is a half assed mock-up of the aforementioned installer
-window.
-
-It looks like this on _Aug 04, 2025_:
+As of commit https://github.com/sskras/installer.hta/commit/ee221c0b6ad979b5a3149cccd7e17c7d5bc2e717[ee221c0],
+it looks like this on _Aug 05, 2025_:
 
 image::installer.png[]
 
