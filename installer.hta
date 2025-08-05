@@ -113,11 +113,17 @@
         /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border#formal_definition */
         width: 388px;
         height: 20px;
-        padding-bottom: 1px;
+        padding-top: 1px;
         /* Via: https://www.freecodecamp.org/news/html-padding-css-padding-order/#heading-padding-bottom-property */
         /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/padding#formal_definition */
         text-indent: 5px;
         /* Via: https://stackoverflow.com/questions/12046638/css-text-indent-on-input-field-doesnt-update-the-caret-position-until-you-start */
+
+        /* Sadly, does not apply to the selection / highlighting box on IE:
+
+        line-height: 11pt; */
+
+        /* Via: https://stackoverflow.com/questions/12893205/how-to-set-the-height-of-an-input-text-field-in-css/12893292#12893292 */
       }
 
       input[type=text]:focus
