@@ -256,6 +256,15 @@
         margin-top: 5px;
       }
 
+      table td.logo
+      {
+        text-align: center;
+        /* Via: https://www.joshwcomeau.com/css/center-a-div/#centering-text-9 */
+
+        /* Width of the rightmost column to contain logo: */
+        width: 78px;
+      }
+
     </style>
 
     <script>
@@ -298,6 +307,7 @@
       <tr class="null">
         <td class="row_number" />
         <td class="row_controls" />
+        <td class="row_logo" />
       </tr>
       <!-- Via: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col#try_it -->
 
@@ -319,10 +329,16 @@
           <hr/>
        -->
         </td>
+
+        <td class="header logo">
+          <div>
+            Logo||| <hr />
+          </div>
+        </td>
       </tr>
 
       <tr>
-        <td colspan="2">
+        <td colspan="3">
         <!-- Via: https://www.computerhope.com/issues/ch001655.htm#colspan -->
           Setup will install gBurner Virtual Drive 5.2 in the following folder. To install in a different <br />
           folder, click Browse and select another folder. Click Install to start the installation.
@@ -336,7 +352,7 @@
       </tr>
 
       <tr>
-        <td colspan="2">
+        <td colspan="3">
           &nbsp;
         </td>
       </tr>
@@ -346,17 +362,17 @@
           4:
         </td>
 
-        <td>
+        <td colspan="2">
           Destination Folder:
         </td>
       </tr>
 
-      <tr>
+      <tr colspan="2">
         <td>
           5:
         </td>
 
-        <td>
+        <td colspan="2">
           <input type="text" size="30" id="destination_folder" />
           <!-- We use no forms (so far)
           Via: https://stackoverflow.com/questions/1397592/difference-between-id-and-name-attributes-in-html/1397613#1397613 -->
@@ -369,7 +385,7 @@
           6:
         </td>
 
-        <td align="right">
+        <td colspan="2" align="right">
           EOL
         </td>
       </tr>
@@ -379,7 +395,7 @@
           7:
         </td>
 
-        <td>
+        <td colspan="2">
           Let us make a selection:
           <input type="radio" name="Options1" value="Yes">Yes</input>
           <input type="radio" name="Options1" value="No" checked>No</input>
@@ -391,7 +407,7 @@
           8:
         </td>
 
-        <td>
+        <td colspan="2">
          <label form="Combo1">Let us see more choices:
           <select size="1" name="Combo1" onChange="indicate_value(this.value)">
           <!-- Via: https://www.w3schools.com/jsref/event_onchange.asp -->
