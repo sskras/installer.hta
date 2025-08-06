@@ -60,14 +60,16 @@
       Via: https://stackoverflow.com/questions/19567887/javascript-version-in-hta/19570684#comment90794240_19570684
      -->
 
-    <title>TODO Installer title</title>
+    <title> The installer </title>
 
     <!-- Installer parameters: --> <script>
 
+      the_installer_title = "gBurner Virtual Drive 5.2 Setup";
       default_install_dir = "C:\\Program Files\\gBurner Virtual Drive";
 
       width  = 639;
       height = 498;
+
     </script>
 
     <style>
@@ -555,9 +557,9 @@
     // Via: http://stoimen.com/2009/07/01/javascript-disable-mouse-wheel/
 
     document.title = document.documentMode + ": " + navigator.userAgent;
-    document.title = "gBurner Virtual Drive 5.2 Setup";
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
+    document.title = the_installer_title;
 
     destination_folder.value = default_install_dir;
     // Via: https://stackoverflow.com/questions/7609130/set-the-default-value-of-an-input-field/62598728#62598728
