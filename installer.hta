@@ -67,8 +67,23 @@
       the_installer_title = "gBurner Virtual Drive 5.2 Setup";
       default_install_dir = "C:\\Program Files\\gBurner Virtual Drive";
 
+      // Desktop item scaling: 125%
+      //
       width  = 639;
       height = 498;
+
+      // Desktop item scaling: 100%
+      //
+      //                       Sizes, px
+      //                --------------------------
+      //               | The window | Client area |
+      //               |--------------------------|
+      //             W |        499 |         497 | The original
+      //             H |        388 |         361 |
+      //               |--------------------------|
+      width  = 513; // |        499 |         497 | Our implementation
+      height = 400; // |        393 |         361 |
+      //                --------------------------
 
     </script>
 
