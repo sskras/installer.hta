@@ -288,6 +288,14 @@
         width: 78px;
       }
 
+      table td.post_header
+      /* Underline the grey td.header border-bottom-* line with white line to add the 3D look: */
+      {
+        border-top-color: #FFFFFF;
+        border-top-style: solid;
+        border-top-width: 1px;
+      }
+
     </style>
 
     <script>
@@ -376,8 +384,9 @@
       <!-------------------------------------------------------------------------------->
 
       <tr>
-        <td colspan="3">
+        <td class="post_header" colspan="3">
         <!-- Via: https://www.computerhope.com/issues/ch001655.htm#colspan -->
+
           Setup will install gBurner Virtual Drive 5.2 in the following folder. To install in a different <br />
           folder, click Browse and select another folder. Click Install to start the installation.
       <!--
