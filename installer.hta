@@ -60,18 +60,17 @@
       Via: https://stackoverflow.com/questions/19567887/javascript-version-in-hta/19570684#comment90794240_19570684
      -->
 
-    <title> The installer </title>
-
     <!-- Installer parameters: --> <script>
 
       the_installer_title = "gBurner Virtual Drive 5.2 Setup";
       default_install_dir = "C:\\Program Files\\gBurner Virtual Drive";
 
       // Desktop item scaling: 125%
-      //
       // TODO:
-   // width  = 639;
-   // height = 498;
+      /*
+      width  = 639;
+      height = 498;
+      */
 
       // Desktop item scaling: 100%
       //
@@ -349,8 +348,7 @@
 
       <!-------------------------------------------------------------------------------->
 
-      <tr class="header">
-
+      <tr>
         <td class="header" colspan="2">
         <!-- Via: https://stackoverflow.com/questions/2403990/html-colspan-in-css/2579484#2579484 -->
 
@@ -364,11 +362,6 @@
           <!-- Via: https://github.com/kichik/nsis/blob/691211035c2aaaebe8fbca48ee02d4de93594a52/Contrib/nsDialogs/welcome.nsi#L130 -->
           <!-- `header`, `text`, and `subtext` come from the NSIS source code. -->
           <!-- Via: https://github.com/kichik/nsis/blob/691211035c2aaaebe8fbca48ee02d4de93594a52/Contrib/Modern%20UI%202/Pages.nsh#L81 -->
-
-      <!--
-          Welcome to the app setup:
-          <hr/>
-       -->
         </td>
 
         <td class="header logo">
@@ -389,12 +382,7 @@
 
           Setup will install gBurner Virtual Drive 5.2 in the following folder. To install in a different <br />
           folder, click Browse and select another folder. Click Install to start the installation.
-      <!--
-          <br />
-          <br />
-          The setup is going to install This TODO Software X.Y in the following folder.
-          To install in a different folder, click Browse and select another folder.
-       -->
+
         </td>
       </tr>
 
@@ -587,7 +575,7 @@
     document.onmousewheel = disable_mouse_events;
     // Via: http://stoimen.com/2009/07/01/javascript-disable-mouse-wheel/
 
-    document.title = document.documentMode + ": " + navigator.userAgent;
+ // document.title = document.documentMode + ": " + navigator.userAgent;
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/20411654#20411654
     // Via: https://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript/24287280#24287280
     document.title = the_installer_title;
