@@ -259,8 +259,6 @@
         border-bottom-width: 1px;
         height: 55px;
         /* Via: https://stackoverflow.com/questions/2092696/how-to-fix-height-of-tr/2092913#2092913 */
-        vertical-align: top;
-	/* https://www.geeksforgeeks.org/html/html-td-valign-attribute/#:~:text=CSS%20vertical%2Dalign%20is%20preferred */
       }
 
       table td.header div.text
@@ -288,10 +286,18 @@
         margin-top: 4px;
       }
 
+      table td.title
+      {
+        vertical-align: top;
+        /* https://www.geeksforgeeks.org/html/html-td-valign-attribute/#:~:text=CSS%20vertical%2Dalign%20is%20preferred */
+      }
+
+
       table td.logo
       {
         text-align: center;
         /* Via: https://www.joshwcomeau.com/css/center-a-div/#centering-text-9 */
+        vertical-align: center;
 
         /* Width of the rightmost column to contain logo: */
         width: 78px;
@@ -359,7 +365,7 @@
       <!-------------------------------------------------------------------------------->
 
       <tr>
-        <td class="header" colspan="2">
+        <td class="header title" colspan="2">
         <!-- Via: https://stackoverflow.com/questions/2403990/html-colspan-in-css/2579484#2579484 -->
 
           <div class="text">
