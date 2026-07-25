@@ -441,9 +441,15 @@
         <td class="folder" colspan="3">
             <!-- Immitate the Windows groupbox control: -->
             <fieldset class="group_box">
+
               <legend>
                 Destination Folder
               </legend>
+
+              <input type="text" size="30" id="destination_folder" />
+              <!-- We use no forms (so far)
+              Via: https://stackoverflow.com/questions/1397592/difference-between-id-and-name-attributes-in-html/1397613#1397613 -->
+
             </fieldset>
             <!-- Via: https://stackoverflow.com/questions/3741333/how-can-i-define-fieldset-border-color/3741343#3741343 -->
         </td>
@@ -459,10 +465,7 @@
         </td>
 
         <td colspan="2">
-          <input type="text" size="30" id="destination_folder" />
           <br /> <br />
-          <!-- We use no forms (so far)
-          Via: https://stackoverflow.com/questions/1397592/difference-between-id-and-name-attributes-in-html/1397613#1397613 -->
           <button type="button"> Browse... </button>
         </td>
 
