@@ -236,19 +236,20 @@
         width: 78px;
       }
 
-      td.post_header
+      td.folder
       {
         /* Underline the grey td.header border-bottom-* line with white line to add the 3D look: */
         border-top-color: #FFFFFF;
         border-top-style: solid;
         border-top-width: 1px;
 
-        height: 125px;
         vertical-align: top;
       }
 
-      td.post_header div.description
+      td.folder div.description
       {
+        height: 114px;
+
         margin-left: 21px;
         margin-top: 13px;
       }
@@ -426,7 +427,7 @@
       <!-------------------------------------------------------------------------------->
 
       <tr>
-        <td class="post_header" colspan="3">
+        <td class="folder" colspan="3">
         <!-- Via: https://www.computerhope.com/issues/ch001655.htm#colspan -->
 
           <div class="description">
@@ -434,14 +435,6 @@
             folder, click Browse and select another folder. Click Install to start the installation.
           </div>
 
-        </td>
-      </tr>
-
-      <!-------------------------------------------------------------------------------->
-
-      <tr>
-
-        <td class="folder" colspan="3">
             <!-- Immitate the Windows groupbox control: -->
             <fieldset class="group_box">
 
