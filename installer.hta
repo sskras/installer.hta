@@ -310,8 +310,12 @@
       {
         margin-left: 6px;
         margin-top: 7px;
+        /* This isn't pixel perfect: -0.5px would be a better match.
+           Sadly the HTML/CSS spec doesn't allow for negative padding: */
+        padding-left: 0px;
+        /* Via: https://stackoverflow.com/questions/4973988/why-does-css-not-support-negative-padding */
 
-        width: 311px;
+        width: 312px;
       }
 
       input[type=text]:focus
