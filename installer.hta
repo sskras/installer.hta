@@ -116,73 +116,6 @@
            draw pixels up to edges of the whole client area using the main table. */
       }
 
-      input, select
-      {
-        font-family: 'MS Shell Dlg 2';
-        font-size:    8pt;
-        font-weight:  500;
-        font-style:   normal;
-      }
-
-      /* Via: https://htmlcolors.com/google-color-picker */
-
-      input[type=text]
-      {
-        border-style: solid;   /* Makes color uniform */
-     /* border-width: 2px;     /* Scale = 125% */
-        border-width: 1px;
-        /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border#formal_definition */
-        width: 388px;
-     /* height: 20px;          /* Scale = 125% */
-        height: 17px;
-     /* padding-top: 1px;      /* Scale = 125% */
-        padding-top: 0px;
-        /* Via: https://www.freecodecamp.org/news/html-padding-css-padding-order/#heading-padding-bottom-property */
-        /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/padding#formal_definition */
-        text-indent: 5px;
-        /* Via: https://stackoverflow.com/questions/12046638/css-text-indent-on-input-field-doesnt-update-the-caret-position-until-you-start */
-
-        /* Sadly, does not apply to the selection / highlighting box on IE:
-        line-height: 11pt; */
-
-        /* Via: https://stackoverflow.com/questions/12893205/how-to-set-the-height-of-an-input-text-field-in-css/12893292#12893292 */
-      }
-
-      input[type=text]:focus
-      {
-     /* border-color: #67ACE2; /* Becomes bluish */  /* Scale = 125% */
-        border-color: #0078D7; /* Becomes blue */
-        /* Via: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2 */
-      }
-
-      input[type=text]:not(:focus)
-      /* Make edit's border look inactive when the focus is lost. */
-      /* Via: https://stackoverflow.com/questions/11703241/does-css-have-a-blur-selector-pseudo-class/11703334#11703334 */
-      {
-        border-color: #ADADAD; /* Becomes gray */
-      }
-
-      input::-ms-clear
-      {
-        display: none;
-        /* Via: https://blog.maximerouiller.com/post/remove-the-x-from-internet-explorer-and-chrome-input-type-search/ */
-        /* Via: https://learn.microsoft.com/en-us/previous-versions/troubleshoot/browsers/development-website/how-to-hide-clear-button-ie-10 */
-
-        width:   0;
-        height:  0;
-        /* Via: https://stackoverflow.com/questions/10842665/internet-explorer-10-windows-8-remove-text-input-and-password-action-icons/17986002#17986002 */
-        /* Via: https://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs/14739092#14739092 */
-      }
-      /* Both of the above tricks fail on IE11 which emulates IE<=9 -- the input's clear button stays present.
-
-         Via: https://forum.profoundlogic.com/forum/viewtopic.php?t=1878#p6597
-         Via: https://stackoverflow.com/questions/31448563/deactivate-the-clear-button-in-input-fields-for-ie8
-         Via: https://stackoverflow.com/questions/19244916/remove-clear-field-x-button-when-browser-mode-ie9-document-modeie9-on-certa
-         Via: https://docs2.w3cub.com/css/::-ms-clear/#:~:text=supported%20only%20in%20Internet%20Explorer%2010%20and%2011%20and%20Edge%2012%2B
-         Via: https://yehg.net/lab/pr0js/misc/ie10-nopeeping/CSS/IE-10/
-         Via: https://jwcooney.com/2013/11/04/fixing-ie-10-text-box-x-and-sizing-issues/
-      */
-
       table
       {
         border-spacing: 0px;
@@ -340,6 +273,73 @@
         padding-left: 0.84px;
         padding-right: 4px;
       }
+
+      input, select
+      {
+        font-family: 'MS Shell Dlg 2';
+        font-size:    8pt;
+        font-weight:  500;
+        font-style:   normal;
+      }
+
+      /* Via: https://htmlcolors.com/google-color-picker */
+
+      input[type=text]
+      {
+        border-style: solid;   /* Makes color uniform */
+     /* border-width: 2px;     /* Scale = 125% */
+        border-width: 1px;
+        /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/border#formal_definition */
+        width: 388px;
+     /* height: 20px;          /* Scale = 125% */
+        height: 17px;
+     /* padding-top: 1px;      /* Scale = 125% */
+        padding-top: 0px;
+        /* Via: https://www.freecodecamp.org/news/html-padding-css-padding-order/#heading-padding-bottom-property */
+        /* Via: https://developer.mozilla.org/en-US/docs/Web/CSS/padding#formal_definition */
+        text-indent: 5px;
+        /* Via: https://stackoverflow.com/questions/12046638/css-text-indent-on-input-field-doesnt-update-the-caret-position-until-you-start */
+
+        /* Sadly, does not apply to the selection / highlighting box on IE:
+        line-height: 11pt; */
+
+        /* Via: https://stackoverflow.com/questions/12893205/how-to-set-the-height-of-an-input-text-field-in-css/12893292#12893292 */
+      }
+
+      input[type=text]:focus
+      {
+     /* border-color: #67ACE2; /* Becomes bluish */  /* Scale = 125% */
+        border-color: #0078D7; /* Becomes blue */
+        /* Via: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2 */
+      }
+
+      input[type=text]:not(:focus)
+      /* Make edit's border look inactive when the focus is lost. */
+      /* Via: https://stackoverflow.com/questions/11703241/does-css-have-a-blur-selector-pseudo-class/11703334#11703334 */
+      {
+        border-color: #ADADAD; /* Becomes gray */
+      }
+
+      input::-ms-clear
+      {
+        display: none;
+        /* Via: https://blog.maximerouiller.com/post/remove-the-x-from-internet-explorer-and-chrome-input-type-search/ */
+        /* Via: https://learn.microsoft.com/en-us/previous-versions/troubleshoot/browsers/development-website/how-to-hide-clear-button-ie-10 */
+
+        width:   0;
+        height:  0;
+        /* Via: https://stackoverflow.com/questions/10842665/internet-explorer-10-windows-8-remove-text-input-and-password-action-icons/17986002#17986002 */
+        /* Via: https://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs/14739092#14739092 */
+      }
+      /* Both of the above tricks fail on IE11 which emulates IE<=9 -- the input's clear button stays present.
+
+         Via: https://forum.profoundlogic.com/forum/viewtopic.php?t=1878#p6597
+         Via: https://stackoverflow.com/questions/31448563/deactivate-the-clear-button-in-input-fields-for-ie8
+         Via: https://stackoverflow.com/questions/19244916/remove-clear-field-x-button-when-browser-mode-ie9-document-modeie9-on-certa
+         Via: https://docs2.w3cub.com/css/::-ms-clear/#:~:text=supported%20only%20in%20Internet%20Explorer%2010%20and%2011%20and%20Edge%2012%2B
+         Via: https://yehg.net/lab/pr0js/misc/ie10-nopeeping/CSS/IE-10/
+         Via: https://jwcooney.com/2013/11/04/fixing-ie-10-text-box-x-and-sizing-issues/
+      */
 
     </style>
 
