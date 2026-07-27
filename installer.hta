@@ -354,6 +354,25 @@
         width: 312px;
       }
 
+      button
+      {
+        background-color: #E1E1E1;
+
+        border-style: solid;   /* Makes color uniform */
+      }
+
+      button:not(:focus)
+      {
+        border-color: #ADADAD; /* Becomes different gray */
+        border-width: 1px;
+      }
+
+      button:focus
+      {
+        border-color: #0078D7; /* Becomes different blue */
+        border-width: 2px;
+      }
+
       td.dir button
       {
         height: 22px;
