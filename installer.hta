@@ -306,18 +306,6 @@
         /* Via: https://stackoverflow.com/questions/12893205/how-to-set-the-height-of-an-input-text-field-in-css/12893292#12893292 */
       }
 
-      td.dir input[type=text]
-      {
-        margin-left: 6px;
-        margin-top: 7px;
-        /* This isn't pixel perfect: -0.5px would be a better match.
-           Sadly the HTML/CSS spec doesn't allow for negative padding: */
-        padding-left: 0px;
-        /* Via: https://stackoverflow.com/questions/4973988/why-does-css-not-support-negative-padding */
-
-        width: 312px;
-      }
-
       input[type=text]:focus
       {
      /* border-color: #67ACE2; /* Becomes bluish */  /* Scale = 125% */
@@ -353,6 +341,18 @@
          Via: https://yehg.net/lab/pr0js/misc/ie10-nopeeping/CSS/IE-10/
          Via: https://jwcooney.com/2013/11/04/fixing-ie-10-text-box-x-and-sizing-issues/
       */
+
+      td.dir input[type=text]
+      {
+        margin-left: 6px;
+        margin-top: 7px;
+        /* This isn't pixel perfect: -0.5px would be a better match.
+           Sadly the HTML/CSS spec doesn't allow for negative padding: */
+        padding-left: 0px;
+        /* Via: https://stackoverflow.com/questions/4973988/why-does-css-not-support-negative-padding */
+
+        width: 312px;
+      }
 
     </style>
 
